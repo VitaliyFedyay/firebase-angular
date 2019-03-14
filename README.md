@@ -1,6 +1,6 @@
 # ToDo Task Manager🕖
 
-This is clone trello on Angular with using Firebase on IDE **VS Code**. 
+This is clone trello on Angular with using Firebase and created on IDE **VS Code**. 
 
 # URL
 Project deployed on https://fir-caa0d.firebaseapp.com/
