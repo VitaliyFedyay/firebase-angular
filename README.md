@@ -11,7 +11,7 @@ This project was created for [GeekHub](http://geekhub.ck.ua/)😎 .
 
 # Prerequisites
 
-- Application dependencies:
+  Application dependencies:
 
 - **Git** - repository access/cloning
 
