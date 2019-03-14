@@ -4,7 +4,7 @@ This is clone trello on Angular with useing Firebase.
 
 
 # Motivation
-This project was created for #GeekHub
+This project was created for [GeekHub](http://geekhub.ck.ua/).
 
 
 # Prerequisites
