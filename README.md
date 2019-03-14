@@ -1,6 +1,6 @@
 # firebase-angular-trello
 
-This is clone trello on Angular with useing Firebase. 
+This is clone trello on Angular with using Firebase. 
 
 
 # Motivation
