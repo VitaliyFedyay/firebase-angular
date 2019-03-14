@@ -7,28 +7,23 @@ This is clone trello on Angular with useing Firebase.
 This project was created for #GeekHub
 
 
-# Screenshots
-
-![img](http://prntscr.com/mxuyxa)
-
-
 # Prerequisites
 
-Application dependencies:
+- Application dependencies:
 
-Git - repository access/cloning
+- Git - repository access/cloning
 
-Node + NPM (Node Package Manager) - package and dependency installation
+- Node + NPM (Node Package Manager) - package and dependency installation
 
-TypeScript - compiles project files for accessibility
+- TypeScript - compiles project files for accessibility
 
 
 # Setup
 
-Open Terminal (or terminal equivalent)
+- Open Terminal (or terminal equivalent)
 
-Clone Repository $ git clone https://github.com/VitaliyFedyay/firebase-angular-trello
+- Clone Repository $ git clone https://github.com/VitaliyFedyay/firebase-angular-trello
 
-Install Application Dependencies using npm: $ npm install
+- Install Application Dependencies using npm: $ npm install
 
-Launch Server $ ng serve --open
+- Launch Server $ ng serve --open
