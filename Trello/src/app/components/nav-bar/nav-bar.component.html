@@ -1,0 +1,30 @@
+<style>
+  .nav-wrapper{
+    margin-left: 1.5%;
+  }
+</style>
+
+<div *ngIf="auth.user | async; then authenticated else guest"></div>
+
+<ng-template #guest>
+  <nav class="blue">
+      <div class="nav-wrapper">
+          <a routerLink="" class="brand-logo">Trello Clone</a>
+        </div> 
+  </nav>
+</ng-template>
+
+
+<ng-template #authenticated>
+    <nav class="blue">
+        <div class="nav-wrapper">
+          <a routerLink="" class="brand-logo hide-on-med-and-down">Trello Clone</a>
+          <ul id="nav-mobile" class="right">
+            <li><a routerLink="/dashboard">Dashboard</a></li>
+            <li><a (click)="auth.signOut()">Logout</a></li>
+
+          </ul>
+        </div> 
+      </nav>
+
+</ng-template>

@@ -1,0 +1,56 @@
+<style>
+  .center{
+    margin-left: 40%
+  }
+</style>
+
+ <div *ngIf="auth.user | async as user">
+    <h3 class="center-align">User account of: {{user.displayName}}</h3>
+   
+  <div [hidden]="edit" class="container">  
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+          <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+              <div class="col s2">
+                <img [src]="user.photoURL" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+              </div>
+              <div class="col s10">
+                  <h5 class="center-align">Username: {{user.displayName}}</h5>
+                  <h5 class="center-align">Email: {{user.email}}</h5>
+                  <h5 class="center-align">User ID: {{user.uid}}</h5>
+                  <button (click)="setEdit()" class="btn blue center">Edit your profile</button>                
+              </div>
+            </div>
+          </div>
+        </div>
+   </div>
+
+   <div [hidden]="!edit" class="container">
+      <div class="col s12 m8 offset-m2 l6 offset-l3">
+          <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+              <div class="col s2">
+                <img [src]="user.photoURL" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+              </div>
+              <div class="col s10">
+                  <label>Change Display Name:
+                      <input [(ngModel)]="user.displayName" placeholder="user.displayName"/>
+                  </label>
+                  <label>Change your email:
+                      <input [(ngModel)]="user.email" placeholder="user.email"/>
+                  </label>
+                  <label>Change Profile picture by URL:
+                      <input [(ngModel)]="user.photoURL" placeholder="user.photoURL"/>
+                  </label>
+                  <button (click)="saveChanges(user)" class="btn blue center">Edit your profile</button>                
+              </div>
+            </div>
+          </div>
+        </div>
+
+   </div>
+
+ </div>>
+              
+                          
+              
