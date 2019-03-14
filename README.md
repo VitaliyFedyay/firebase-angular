@@ -8,9 +8,10 @@ This project was created for #GeekHub
 
 
 # Screenshots
-
-http://prntscr.com/mxuyxa
-
+<p align="center">
+  <img src="http://prntscr.com/mxuyxa" width="350" title="hover text">
+  <img src="http://prntscr.com/mxuyxa" width="350" alt="accessibility text">
+</p>
 
 # Prerequisites
 
