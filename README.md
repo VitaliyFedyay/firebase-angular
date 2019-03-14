@@ -1,10 +1,12 @@
-# firebase-angular-trello
+# ToDo Task Manager🕖
 
-This is clone trello on Angular with using Firebase. 
+This is clone trello on Angular with using Firebase on IDE **VS Code**. 
 
+# URL
+Project deployed on https://fir-caa0d.firebaseapp.com/
 
 # Motivation
-This project was created for [GeekHub](http://geekhub.ck.ua/).
+This project was created for [GeekHub](http://geekhub.ck.ua/)😎 .
 
 
 # Prerequisites
@@ -20,10 +22,12 @@ This project was created for [GeekHub](http://geekhub.ck.ua/).
 
 # Setup
 
-- Open Terminal (or terminal equivalent)
+✔ Open Terminal (or terminal equivalent)
 
-- Clone Repository $ **git clone https://github.com/VitaliyFedyay/firebase-angular-trello**
+✔ Clone Repository $ **git clone https://github.com/VitaliyFedyay/firebase-angular-trello**
 
-- Install Application Dependencies using npm: $ **npm install**
+✔ Install Application Dependencies using npm: $ **npm install**
 
-- Launch Server $ **ng serve --open**
+✔ Launch Server $ **ng serve --open**
+
+**Good luck**😉
