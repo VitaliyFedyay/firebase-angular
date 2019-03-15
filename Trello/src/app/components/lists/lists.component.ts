@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 
-import { BoardsService } from '../../boards.service';
-import { List } from '../../List';
-import { Note } from '../../Note';
+import { BoardsService } from '../../services/boards.service';
+import { List } from '../../models/List';
+import { Note } from '../../models/Note';
 
 @Component({
   selector: 'app-lists',
   templateUrl: './lists.component.html',
-  styleUrls: ['./lists.component.css']
+  styleUrls: ['./lists.component.scss']
 })
 export class ListsComponent implements OnInit {
 

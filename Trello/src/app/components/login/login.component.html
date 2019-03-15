@@ -8,7 +8,7 @@
           <h3 class="center-align">Howdy, GUEST</h3>
           <h5 class="center-align">Login to get started...</h5>
           
-          <button class="btn indigo" (click)="auth.googleLogin()">
+          <button class="btn" (click)="auth.googleLogin()">
               <i class="fa fa-google"></i> Login / Register with Google
           </button>
     
@@ -24,9 +24,9 @@
           <div class="container">
               
               <h3 class="center-align">Welcome {{user.displayName}}</h3>              
-              <h6 class="center-align">Here you can greate boards, then you can create lists and inside these
+              <h5 class="center-align">Here you can greate boards, then you can create lists and inside these
                 lists you can create notes. The notes can be dropped and draged from on list into the other.
-              </h6>
+              </h5>
   
               <button class="btn indigo" routerLink='/dashboard' (click)="getUid(user.uid)">Go to your Dashboard</button> 
               <button class="btn blue" routerLink='/user-profile'>Edit your user profile</button> 

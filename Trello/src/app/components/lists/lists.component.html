@@ -1,44 +1,25 @@
-<style>
-    .listcard{
-      height: auto;
-      margin: 10px 10px auto 10px;
-    }
-    .btn{
-      width: 100%;
-      margin-bottom: 5%;
-    } 
-    .listbutton{
-      margin-bottom: 20px;
-    }
-    .deleteX{
-      cursor: pointer;
-    }
-    .noteCard{
-      cursor: -webkit-grab;
-    }
-</style>
-  
-  <div class="container">
-    <h2 class="center-align">Add or manage your lists</h2>
+<div class="container">
+    <h3 class="center-align">Add or manage your lists</h3>
 
     <input class="col s8" type="text" placeholder="What is the title of your new list?" #listTitle>
     <button class="btn" (click)="getNr(listTitle.value); listTitle.value=''">Add a new list</button>
   
-    <div class="row col s12">
-      <div droppable (onDrop)="onItemDrop($event, this.list.id)" *ngFor="let list of lists" class="card listcard col s2">
-          <h5>{{list.title}} <span (click)="deleteList(list, this.list.id)" class="right red-text deleteX">X</span></h5>
+    <div class="row col s8 position">
+      <div droppable (onDrop)="onItemDrop($event, this.list.id)" *ngFor="let list of lists" class="card listcard col s3" style="">
+          <h5 style="white-space: nowrap; overflow: hidden; font-size:1.5em">{{list.title}} </h5>
           
           <div draggable *ngFor="let note of notes" [dragData]="note.id">
-            <div *ngIf="note.nr == list.id" class="card noteCard">{{note.text}}  <span (click)="deleteNote(note, this.note.id)" class="right red-text deleteX">X</span></div>
+            <div *ngIf="note.nr == list.id" class="card noteCard" style="white-space: nowrap;overflow-x:hidden; font-size:1.5em">{{note.text}} 
+               <span (click)="deleteNote(note, this.note.id)" class="right red-text deleteX">x</span>
+              </div>
 
           </div>
           <input type="text" placeholder="Add a new note" #noteText>
           <button (click)="addNote(noteText.value, list.id); noteText.value=''" class="btn listbutton">Add</button>   
+        
+            <button (click)="deleteList(list, this.list.id)" style="cursor:pointer" class="btn listbutton">Delete card</button>   
           
-              
-  
       </div>
     </div>
-  
-  </div>
+</div>
   

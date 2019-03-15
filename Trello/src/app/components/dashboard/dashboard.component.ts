@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Board } from '../../Board';
-import { BoardsService } from '../../boards.service';
+import { Board } from '../../models/Board';
+import { BoardsService } from '../../services/boards.service';
 
-import { AuthService } from '../../core/auth.service';
-import { User } from '../../User';
+import { AuthService } from '../../services/auth.service';
+import { User } from '../../models/User';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
 

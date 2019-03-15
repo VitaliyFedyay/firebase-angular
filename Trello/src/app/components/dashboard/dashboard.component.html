@@ -1,32 +1,10 @@
-<style>
-  .card{
-    height: 150px;
-    margin: 10px 10px 10px 10px;
-  }
-  .btn{
-    width: 100%;
-    margin-bottom: 2%;
-  }
-  .btnAdd{
-    margin-top: 2%;
-  }
-  .deleteX{
-      cursor: pointer;
-    }
-    .boardTitle{
-      cursor: pointer;
-    }
-</style> 
-
-    <div *ngIf="auth.user | async as user">
+<div *ngIf="auth.user | async as user">
         <div class="container row">
             
             <h5 class="center-align">Welcome {{user.displayName}}</h5>
-            <p class="center-align">Here you can create boards, then you can create lists and inside these
+            <h6 class="center-align">Here you can create boards, then you can create lists and inside these
                 lists you can create notes. The notes can be dropped and draged from one list into the other.
-            </p>       
-            
- 
+            </h6>       
                 <input class="col s7 left" type="text" placeholder="What is the title of your new board?" #boardTitle>
                 <select class="browser-default validate col s4 right" #boardColor>
                     <option value="" disabled selected>Add a color</option>
@@ -47,15 +25,15 @@
 
             <button class="btn blue" (click)="addBoard(boardTitle.value, boardColor.value, this.user.uid); boardTitle.value=''; boardColor.value=''">Add a new Board</button>
           
-            <div class="row col s12"> 
-              <div *ngFor="let board of boards" class="card {{board.color}} col s3">
-                  <h5 routerLink="/lists/{{board.id}}" class="boardTitle" >{{board.title}}</h5>
-                  <br>
-                  <h3 (click)="deleteBoard(board, this.board.id)" class="right red-text deleteX">X</h3>          
+            <div class="row col s10 m10" style="position: absolute; margin: 0 auto;"> 
+              <div *ngFor="let board of boards" class="card {{board.color}} col row s3">
+                  <h5 routerLink="/lists/{{board.id}}" class="boardTitle" style="white-space: nowrap; overflow: hidden; font-size:1.5em">{{board.title}}</h5>
+                  <br><br>
+                  <div class="card-action">
+                    <a (click)="deleteBoard(board, this.board.id)" style="cursor:pointer">Delete card</a>   
+                  </div>       
               </div>
             </div>
-
-
           </div>
     </div>
 

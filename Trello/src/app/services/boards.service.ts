@@ -5,9 +5,9 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 
 import { Observable } from 'rxjs/Observable';
 
-import { Board } from './Board';
-import { List } from './List';
-import { Note } from './Note';
+import { Board } from '../models/Board';
+import { List } from '../models/List';
+import { Note } from '../models/Note';
 
  
 @Injectable()
