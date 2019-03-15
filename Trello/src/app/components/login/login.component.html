@@ -1,10 +1,4 @@
-<style>
-    .btn{
-      width: 100%;
-      margin: 2% 0 0 0;
-    }
-  </style> 
-  
+
   <div *ngIf="auth.user | async; then authenticated else guest">
     <!-- template will replace this div -->
   </div>
@@ -19,7 +13,9 @@
           </button>
     
         </div>
-    
+        <div class="bottom">
+          <img src="./assets/img/logo.png" style="width: 70%"/>  
+      </div>
   
   </ng-template>
   
@@ -38,6 +34,9 @@
   
             </div>
       </div>
+      <div class="bottom">
+        <img src="./assets/img/logo.png" style="width: 70%"/>  
+    </div>
   </ng-template>
   
   
