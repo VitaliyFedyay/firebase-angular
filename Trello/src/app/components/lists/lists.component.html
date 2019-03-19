@@ -10,7 +10,7 @@
         
         <div draggable *ngFor="let note of notes" [dragData]="note.id">
           <div *ngIf="note.nr == list.id" class="card noteCard" style="overflow-x:hidden;font-size:1.1em">{{note.text}} 
-            <span (click)="deleteNote(note, this.note.id)" class="right red-text deleteX">x</span>
+            <span (click)="deleteNote(note, this.note.id)" class="right red-text deleteX"><i class="material-icons" style="font-size:20px">clear</i></span>
           </div>
         </div>
         <input type="text" placeholder="Add a new note" #noteText>
