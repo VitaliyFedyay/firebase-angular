@@ -5,7 +5,7 @@
     <button class="btn" (click)="getNr(listTitle.value); listTitle.value=''">Add a new list</button>
   
     <div class="row col s8 position">
-      <div droppable (onDrop)="onItemDrop($event, this.list.id)" *ngFor="let list of lists" class="card listcard col s3" style="">
+      <div droppable (onDrop)="onItemDrop($event, this.list.id)" *ngFor="let list of lists" class="card listcard col s3 hoverable" style="">
           <h5 style="white-space: nowrap; overflow: hidden; font-size:1.5em">{{list.title}} </h5>
           
           <div draggable *ngFor="let note of notes" [dragData]="note.id">
@@ -16,9 +16,7 @@
           </div>
           <input type="text" placeholder="Add a new note" #noteText>
           <button (click)="addNote(noteText.value, list.id); noteText.value=''" class="btn listbutton">Add</button>   
-        
-            <button (click)="deleteList(list, this.list.id)" style="cursor:pointer" class="btn listbutton">Delete card</button>   
-          
+          <button (click)="deleteList(list, this.list.id)" style="cursor:pointer" class="btn listbutton">Delete card</button>   
       </div>
     </div>
 </div>

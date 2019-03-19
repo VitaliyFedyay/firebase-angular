@@ -26,7 +26,7 @@
             <button class="btn blue" (click)="addBoard(boardTitle.value, boardColor.value, this.user.uid); boardTitle.value=''; boardColor.value=''">Add a new Board</button>
           
             <div class="row col s10 m10" style="position: absolute; margin: 0 auto;"> 
-              <div *ngFor="let board of boards" class="card {{board.color}} col row s3">
+              <div *ngFor="let board of boards" class="card {{board.color}} col row s3 hoverable">
                   <h5 routerLink="/lists/{{board.id}}" class="boardTitle" style="white-space: nowrap; overflow: hidden; font-size:1.5em">{{board.title}}</h5>
                   <br><br>
                   <div class="card-action">
