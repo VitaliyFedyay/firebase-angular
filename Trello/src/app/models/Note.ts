@@ -1,4 +1,4 @@
 export interface Note {
-    text: string;
-    nr: string;
+  text: string;
+  nr: string;
 }

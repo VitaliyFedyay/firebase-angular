@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
-
-
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
-
 import { Observable } from 'rxjs/Observable';
-
 import { Board } from '../models/Board';
 import { List } from '../models/List';
 import { Note } from '../models/Note';
@@ -12,7 +8,6 @@ import { Note } from '../models/Note';
  
 @Injectable()
 export class BoardsService {
-
   boardsCollection: AngularFirestoreCollection<Board>;
   boardDoc: AngularFirestoreDocument<Board>;
   listsCollection: AngularFirestoreCollection<List>;
@@ -29,7 +24,6 @@ export class BoardsService {
   //Init the dependencies
   constructor( private asf: AngularFirestore ) { }
 
-
   //Get boards collection 
   getBoards (uid): Observable<Board[]> {
     this.boardsCollection = this.asf.collection<Board>('/boards', ref => ref.where('nr', '==', `${uid}`));
@@ -42,7 +36,6 @@ export class BoardsService {
     });
     return this.boards;
   }
-
 
   //Get lists collection where the ID matches the Boards ID
   getLists (id: string): Observable<any> {
@@ -117,8 +110,4 @@ export class BoardsService {
   addNote (note: Note) {
     this.notesCollection.add(note); 
   } 
-
-  
-
-
 }

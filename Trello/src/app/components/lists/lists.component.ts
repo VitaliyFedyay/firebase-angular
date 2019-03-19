@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
-
 import { BoardsService } from '../../services/boards.service';
 import { List } from '../../models/List';
 import { Note } from '../../models/Note';
@@ -17,7 +16,6 @@ export class ListsComponent implements OnInit {
   nr: string;
   note: Note;
   dragId: string;
-  
 
   constructor(
     //init of dependacies
@@ -39,9 +37,7 @@ export class ListsComponent implements OnInit {
     this.boardsService.getNotes().subscribe(notes => {
       this.notes = notes;        
     });   
-
   }
-
   
   getNr(title: string){
     this.addList(title, this.nr);
@@ -53,7 +49,6 @@ export class ListsComponent implements OnInit {
     if (!title) { return; }
     this.boardsService.addList({title, nr} as List);
   }
-
 
   //Add a note to a list
   addNote(text: string, nr: String): void {
@@ -80,5 +75,4 @@ export class ListsComponent implements OnInit {
       console.log(this.note);  
     });
   }
-
 }

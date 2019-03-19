@@ -1,23 +1,26 @@
 .listcard {
-    height: auto;
-    margin: 20px 20px auto 20px;
-    border-radius:15px;
-    word-wrap: break-word; /* Перенос слов */ 
+  height: auto;
+  margin: 20px 20px auto 20px;
+  border-radius:15px;
+  word-wrap: break-word; /* Перенос слов */ 
 }
-  .btn{
-    width: 100%;
-    margin-bottom: 5%;
-    background-color: #1b97f3;
-  } 
-  .listbutton{
-    margin-bottom: 20px;
-  }
-  .deleteX{
-    cursor: pointer;
-  }
-  .noteCard{
-    cursor: -webkit-grab;
-  }
+  .btn {
+  width: 100%;
+  margin-bottom: 5%;
+  background-color: #1b97f3;
+} 
+
+.listbutton {
+  margin-bottom: 20px;
+}
+
+.deleteX {
+  cursor: pointer;
+}
+
+.noteCard {
+  cursor: -webkit-grab;
+}
 
 .position {
   padding-left: 80px;
