@@ -24,7 +24,7 @@ This project was created for [GeekHub](http://geekhub.ck.ua/)😎 .
 
 ✔ Open Terminal (or terminal equivalent)
 
-✔ Clone Repository $ **git clone https://github.com/VitaliyFedyay/firebase-angular-trello**
+✔ Clone Repository $ **git clone https://github.com/VitaliyFedyay/firebase-angular**
 
 ✔ Install Application Dependencies using npm: $ **npm install**
 
