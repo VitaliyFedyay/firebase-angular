@@ -1,0 +1,24 @@
+<div class="container" style="font-family: 'Segoe Print';">
+  <h3 class="center-align">Add or manage your lists</h3>
+
+  <input class="col s8" type="text" placeholder="What is the title of your new list?" #listTitle>
+  <button class="btn" (click)="getNr(listTitle.value); listTitle.value=''">Add a new list</button>
+  <div class="row">
+    <div class="col m12 position">
+      <div droppable (onDrop)="onItemDrop($event, this.list.id)" *ngFor="let list of lists"
+        class="card listcard col s3 hoverable">
+        <h5 style="white-space: nowrap; overflow: hidden; font-size:1.5em">{{list.title}} </h5>
+
+        <div draggable *ngFor="let note of notes" [dragData]="note.id">
+          <div *ngIf="note.nr == list.id" class="card noteCard" style="overflow-x:hidden;font-size:1.1em">{{note.text}}
+            <span (click)="deleteNote(note, this.note.id)" class="right red-text deleteX">X</span>
+          </div>
+        </div>
+        <input type="text" placeholder="Add a new note" #noteText>
+        <button (click)="addNote(noteText.value, list.id); noteText.value=''" class="btn listbutton">Add</button>
+        <button (click)="deleteList(list, this.list.id)" style="cursor:pointer" class="btn listbutton">Delete
+          card</button>
+      </div>
+    </div>
+  </div>
+</div>
