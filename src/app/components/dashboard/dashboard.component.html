@@ -1,10 +1,9 @@
 <div *ngIf="auth.user | async as user">
-  <div class="container row" style="font-family: 'Segoe Print';">
+  <div class="container row" style="font-family: 'Arial, sans-serif'">
 
-    <h5 class="center-align">Welcome {{user.displayName}}</h5>
-    <h6 class="center-align">Here you can create boards, then you can create lists and inside these
+    <p class="center-align">Here you can create boards, then you can create lists and inside these
       lists you can create notes. The notes can be dropped and draged from one list into the other.
-    </h6>
+    </p>
     <input class="col s7 left" type="text" placeholder="What is the title of your new board?" #boardTitle>
     <select class="browser-default validate col s4 right" #boardColor>
       <option value="" disabled selected>Add a color</option>
@@ -20,7 +19,7 @@
       <option class="yellow" value="yellow">Yellow</option>
       <option class="amber" value="amber">Amber</option>
       <option class="orange" value="orange">Orange</option>
-      <option class="gray" value="gray">Gray</option>
+      <option class="white" value="white">White</option>
     </select>
 
     <button class="btn blue"
@@ -28,12 +27,11 @@
       a new Board</button>
 
     <div class="row col s8 m10" style="position: absolute; margin: 0 auto;padding-left: 5.2% ">
-      <div *ngFor="let board of boards" class="card {{board.color}} col row s3 hoverable">
-        <h5 routerLink="/lists/{{board.id}}" class="boardTitle"
-          style="white-space: nowrap; overflow: hidden; font-size:1.5em">{{board.title}}</h5>
+      <div id="dashboard" *ngFor="let board of boards" routerLink="/lists/{{board.id}}" class="card {{board.color}} col row s3 hoverable">
+        <h5 class="boardTitle" style="white-space: nowrap; overflow: hidden; font-size:1.5em;font-family: 'Segoe Print'">{{board.title}}</h5>
         <br><br>
         <div class="card-action">
-          <a (click)="deleteBoard(board, this.board.id)" style="cursor:pointer">Delete card</a>
+          <a (click)="deleteBoard(board, this.board.id)">Delete card</a>
         </div>
       </div>
     </div>

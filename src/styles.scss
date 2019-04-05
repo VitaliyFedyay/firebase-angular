@@ -2,7 +2,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 body {
-  background: linear-gradient(to bottom, rgb(33,150,243), #40e2d5);
+  background: linear-gradient(to bottom, rgba(33, 150, 243, 0.85), rgba(64, 266, 213, 0.8));
   background-attachment: fixed;
   background-size: cover;
   min-height: 100%;

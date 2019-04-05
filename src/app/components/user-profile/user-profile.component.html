@@ -1,6 +1,6 @@
-<div class="text" style="font-family: 'Segoe Print';">
+<div class="text" style="font-family: 'Arial, sans-serif'">
   <div *ngIf="auth.user | async as user">
-    <h4 class="center-align">User account of: {{user.displayName}}</h4>
+    <h4 class="center-align" style="color:white">User account of: {{user.displayName}}</h4>
 
     <div [hidden]="edit" class="container">
       <div class="col s12 m8 offset-m2 l6 offset-l3">
@@ -24,17 +24,18 @@
       <div class="col">
         <div class="card-panel">
           <div class="row valign-wrapper">
-            <div class="col s12">
-              <label>Change Display Name:
-                <input [(ngModel)]="user.displayName" placeholder="user.displayName" />
+            <div class="col s12 m12">
+              <label>Enter new name:
+                <input [(ngModel)]="user.displayName" />
               </label>
-              <label>Change your email:
-                <input [(ngModel)]="user.email" placeholder="user.email" />
+              <label>Enter new email:
+                <input [(ngModel)]="user.email" />
               </label>
-              <label>Change Profile picture by URL:
-                <input [(ngModel)]="user.photoURL" placeholder="user.photoURL" />
+              <label>Paste profile picture by URL (copy URL your new photo and paste pls):
+                <input [(ngModel)]="user.photoURL" />
               </label>
-              <button (click)="saveChanges(user)" class="btn blue center">Edit your profile</button>
+              <button (click)="saveChanges(user)" class="btn blue center">Save</button>
+              <button class="btn blue" routerLink='/dashboard'>Cancel</button>
             </div>
           </div>
         </div>

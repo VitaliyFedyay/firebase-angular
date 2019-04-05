@@ -18,6 +18,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { BoardsService } from './services/boards.service';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ListsComponent,
     LoginComponent,
     NotfoundComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
