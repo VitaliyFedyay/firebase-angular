@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
-import { BoardsService } from '../../services/boards.service';
 import { List } from '../../models/List';
 import { Note } from '../../models/Note';
+import { Board } from '../../models/Board';
+import { BoardsService } from '../../services/boards.service';
+import { AuthService } from '../../services/auth.service';
+import { User } from '../../models/User';
 
 @Component({
   selector: 'app-lists',
@@ -13,21 +16,26 @@ export class ListsComponent implements OnInit {
 
   lists: List[];
   notes: Note[];
-  nr: string;
   note: Note;
   dragId: string;
+  boards: Board[];
+  nr: string;
+  user: User;
+  uid: any;
 
   constructor(
     // init of dependacies
     private route: ActivatedRoute,
     private router: Router,
-    private boardsService: BoardsService
+    private boardsService: BoardsService,
+    public auth: AuthService
   ) { }
 
   ngOnInit() {
     // Get the Boards id form the URL
     this.nr = this.route.snapshot.params['id'];
 
+    this.getBoards(this.auth.userId)
     // Get all lists with the same ID as the Boards ID
     this.boardsService.getLists(this.nr).subscribe(lists => {
       this.lists = lists;
@@ -72,4 +80,21 @@ export class ListsComponent implements OnInit {
       console.log(this.note);
     });
   }
+
+  getBoards(uid) {
+    this.boardsService.getBoards(uid)
+      .subscribe(boards => this.boards = boards);
+  }
+
+  addBoard(title: string, color: string, nr: string): void {
+    title = title.trim();
+    if (!title) { return; }
+    this.boardsService.addBoard({ title, color, nr } as Board);
+  }
+
+  deleteBoard(board: Board, id: string): void {
+    this.boardsService.deleteBoard(board, id);
+  }
+  
+
 }
