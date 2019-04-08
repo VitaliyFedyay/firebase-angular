@@ -1,8 +1,13 @@
+<div *ngIf="auth.user | async as user">
 <div class="container" style="font-family: 'Arial, sans-serif'">
+
   <h3 class="center-align">Add or manage your lists</h3>
 
-  <input class="col s8" type="text" placeholder="What is the title of your new list?" #listTitle>
+  <input style="width:65%" type="text" placeholder="What is the title of your new list?" #listTitle>
+  <div class="inpBut">
   <button class="btn" (click)="getNr(listTitle.value); listTitle.value=''">Add a new list</button>
+  <button class="btn" routerLink="/dashboard">Cancel</button>
+  </div>
   <div class="row">
     <div class="col m12 position">
       <div droppable (onDrop)="onItemDrop($event, this.list.id)" *ngFor="let list of lists"
@@ -22,9 +27,4 @@
     </div>
   </div>
 </div>
-<div class="slider">
-    <div id="dashboard" *ngFor="let board of boards" routerLink="/lists/{{board.id}}" class="card col row s3 hoverable">
-      <h5 class="boardTitle" style="white-space: nowrap; overflow: hidden; font-size:1.5em;font-family: 'Segoe Print'">{{board.title}}</h5>
-    </div>
-  </div>
-  
+</div>

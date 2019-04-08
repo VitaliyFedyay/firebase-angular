@@ -26,16 +26,14 @@ export class ListsComponent implements OnInit {
   constructor(
     // init of dependacies
     private route: ActivatedRoute,
-    private router: Router,
-    private boardsService: BoardsService,
+    public boardsService: BoardsService,
     public auth: AuthService
   ) { }
 
   ngOnInit() {
+    this.getBoards(this.auth.userId);
     // Get the Boards id form the URL
     this.nr = this.route.snapshot.params['id'];
-
-    this.getBoards(this.auth.userId)
     // Get all lists with the same ID as the Boards ID
     this.boardsService.getLists(this.nr).subscribe(lists => {
       this.lists = lists;
@@ -45,6 +43,7 @@ export class ListsComponent implements OnInit {
       this.notes = notes;
     });
   }
+  
   getNr(title: string) {
     this.addList(title, this.nr);
   }
@@ -95,6 +94,4 @@ export class ListsComponent implements OnInit {
   deleteBoard(board: Board, id: string): void {
     this.boardsService.deleteBoard(board, id);
   }
-  
-
 }
