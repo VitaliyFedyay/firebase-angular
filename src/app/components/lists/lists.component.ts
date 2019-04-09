@@ -43,7 +43,7 @@ export class ListsComponent implements OnInit {
       this.notes = notes;
     });
   }
-  
+
   getNr(title: string) {
     this.addList(title, this.nr);
   }
