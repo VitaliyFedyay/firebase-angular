@@ -8,3 +8,34 @@
  top: 0;
  width: 5%;
 }
+
+.nav-title {
+  font-family: 'Segoe Print';
+}
+
+@media screen and (device-width: 360px) {
+  .icon {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 15%;
+   }
+}
+
+@media screen and (device-width: 375px) {
+  .icon {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 15%;
+   }
+}
+
+@media screen and (device-width: 414px) {
+  .icon {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 15%;
+   }
+}

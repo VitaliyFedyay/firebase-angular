@@ -1,9 +1,9 @@
 <div *ngIf="auth.user | async; then authenticated else guest"></div>
 
 <ng-template #guest>
-  <nav class="blue" style="font-family: 'Segoe Print'">
+  <nav class="blue nav-title">
     <div class="nav-wrapper">
-      <a routerLink="" class="brand-logo">ToDo Task Manager</a>
+      <a routerLink="" class="brand-logo">Trello lite</a>
     </div>
   </nav>
 </ng-template>
