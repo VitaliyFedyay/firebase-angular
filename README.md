@@ -1,9 +1,9 @@
 # ToDo Task Manager🕖
 
-This is project on Angular with using Firebase and created on IDE **VS Code**. 
+This is project on Angular with using Firebase as backend, with Materialize and created on IDE **VS Code**. 
 
 # URL
-Project deployed on https://fir-caa0d.firebaseapp.com/
+Project have adaptive design and was deployed on https://fir-caa0d.firebaseapp.com/
 
 # Motivation
 This project was created for [GeekHub](http://geekhub.ck.ua/)😎 .
