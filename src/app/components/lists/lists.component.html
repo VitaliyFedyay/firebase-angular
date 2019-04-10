@@ -4,10 +4,12 @@
   <h3 class="center-align">Add or manage your lists</h3>
 
   <input style="width:65%" type="text" placeholder="What is the title of your new list?" #listTitle>
+  
   <div class="inpBut">
-  <button class="btn" (click)="getNr(listTitle.value); listTitle.value=''">Add a new list</button>
+  <button class="btn" (click)="getNr(listTitle.value); listTitle.value=''">Add</button>
   <button class="btn" routerLink="/dashboard">Cancel</button>
   </div>
+
   <div class="row">
     <div class="col m12 position">
       <div droppable (onDrop)="onItemDrop($event, this.list.id)" *ngFor="let list of lists"
@@ -21,8 +23,7 @@
         </div>
         <input type="text" placeholder="Add a new note" #noteText>
         <button (click)="addNote(noteText.value, list.id); noteText.value=''" class="btn listbutton">Add</button>
-        <button (click)="deleteList(list, this.list.id)" style="cursor:pointer" class="btn listbutton">Delete
-          card</button>
+        <button (click)="deleteList(list, this.list.id)" style="cursor:pointer" class="btn listbutton">Delete card</button>
       </div>
     </div>
   </div>

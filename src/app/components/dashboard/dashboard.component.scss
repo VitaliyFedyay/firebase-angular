@@ -1,6 +1,5 @@
 .card {
-  height: 150px;
-  margin: 10px 10px 10px 10px;
+ margin: 2% 2% 2% 2%;
 }
 .btn {
   width: 100%;
@@ -14,6 +13,14 @@
 }
 .boardTitle {
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size:1.5em;
+  font-family: 'Segoe Print';
+}
+
+.container {
+  font-family: 'Arial, sans-serif';
 }
 
 p {
@@ -22,6 +29,49 @@ p {
 
 #dashboard {
   cursor: pointer;
+  opacity: 0.95
 }
+
+.dashboard {
+  position: absolute;
+  margin: 0 auto;
+}
+
+@media screen and (width: 360px) {
+  .card {
+   margin: 50% 10% 10% 10%;
+   width: 300px;
+  }
+}
+
+@media screen and (width: 414px) {
+  .card {
+   margin: 50% 10% 10% 10%;
+   width: 340px;
+  }
+}
+
+@media screen and (width: 411px) {
+  .card {
+   margin: 50% 10% 10% 10%;
+   width: 340px;
+  }
+}
+
+@media screen and (width: 320px) {
+  .card {
+   margin: 50% 10% 10% 10%;
+   width: 260px;
+  }
+}
+
+@media screen and (width: 375px) {
+  .card {
+   margin: 50% 10% 10% 10%;
+   width: 300px;
+  }
+}
+
+
 
 
