@@ -4,11 +4,11 @@
   border-radius:15px;
   word-wrap: break-word; /* Перенос слов */ 
 }
-  .btn {
+.btn {
   width: 100%;
   margin-bottom: 5%;
   background-color: #1b97f3;
-} 
+}
 
 .listbutton {
   margin-bottom: 20px;
@@ -35,3 +35,14 @@
   cursor: pointer;
 }
 
+@media screen and (width: 320px) {
+  .btn {
+    font-size: 12px;
+  }
+}
+
+@media screen and (width: 360px) {
+  .btn {
+    font-size: 12px;
+  }
+}
