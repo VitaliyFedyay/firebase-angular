@@ -9,3 +9,37 @@ body {
   margin: 0;
   padding: 0;
   }
+
+@media screen and (max-width: 360px) {
+  body {
+    background:#27cdeb;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background:#27cdeb;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+}
+
+@media screen and (max-width: 414px) {
+  body {
+    background:#27cdeb;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+}
+

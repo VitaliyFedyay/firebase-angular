@@ -7,8 +7,8 @@
     <h3 class="center-align">Hello, guest!</h3>
     <h5 class="center-align">Login to get started...</h5>
 
-    <button style="margin-left:5%; width: 90%" class="btn hoverable" (click)="auth.googleLogin()">
-      <i class="fa fa-google-plus-square" style="font-size:20px"> Login with Google</i>
+    <button class="btn hoverable" (click)="auth.googleLogin()">
+      <i class="fa fa-google-plus-square"> Login with Google</i>
     </button>
   </div>
 </ng-template>
@@ -16,14 +16,15 @@
 <ng-template #authenticated>
   <div *ngIf="auth.user | async as user">
     <div class="container" style="font-family: 'Arial, sans-serif'">
-
-      <h3 class="center-align">Welcome {{user.displayName}}</h3>
-      <h5 class="center-align">Here you can create boards, then you can create lists and inside these
+      <div class="title-text">
+      <h4 class="center-align">Welcome {{user.displayName}}</h4>
+      <p class="center-align">Here you can create boards, then you can create lists and inside these
         lists you can create notes. The notes can be dropped and draged from on list into the other.
-      </h5>
+      </p>
+      </div>
       <div class="but">
-        <button class="btn indigo hoverable" routerLink='/dashboard' (click)="getUid(user.uid)">Go to your Dashboard</button>
-        <button class="btn blue hoverable" routerLink='/user-profile'>Edit your user profile</button>
+        <button class="btn indigo hoverable" routerLink='/dashboard' (click)="getUid(user.uid)">Go to dashboard</button>
+        <button class="btn blue hoverable" routerLink='/user-profile'>Edit profile</button>
         <button class="btn hoverable" (click)="auth.signOut()">Logout</button>
       </div>
     </div>
