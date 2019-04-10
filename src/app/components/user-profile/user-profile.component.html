@@ -3,18 +3,18 @@
     <h4 class="center-align" style="color:white">User account of: {{user.displayName}}</h4>
 
     <div [hidden]="edit" class="container">
-      <div class="col s12 m8 offset-m2 l6 offset-l3">
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s2">
-              <img [src]="user.photoURL" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-            </div>
-            <div class="col s9">
-              <h5 class="center-align">Username: {{user.displayName}}</h5>
-              <h5 class="center-align">Email: {{user.email}}</h5>
-              <h5 class="center-align">User ID: {{user.uid}}</h5>
-              <button (click)="setEdit()" class="btn blue center">Edit your profile</button>
-            </div>
+
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <!--<img class="center row s1 m1 l1 xl1" [src]="user.photoURL" alt="" class="circle responsive-img">
+           
+               notice the "circle" class -->
+          <div class="col s12 m12 l12 xl12">
+            <img class="center-align" [src]="user.photoURL" alt="" class="circle responsive-img">
+            <h5 class="center-align">Username: {{user.displayName}}</h5>
+            <h5 class="center-align">Email: {{user.email}}</h5>
+            <h5 class="id center-align">User ID: {{user.uid}}</h5>
+            <button (click)="setEdit()" class="col s12 m12 l12 xl12 btn blue center">Edit profile</button>
           </div>
         </div>
       </div>
@@ -23,20 +23,19 @@
     <div [hidden]="!edit" class="container">
       <div class="col">
         <div class="card-panel">
-          <div class="row valign-wrapper">
-            <div class="col s12 m12">
-              <label>Enter new name:
-                <input [(ngModel)]="user.displayName" />
-              </label>
-              <label>Enter new email:
-                <input [(ngModel)]="user.email" />
-              </label>
-              <label>Paste profile picture by URL (copy URL your new photo and paste pls):
-                <input [(ngModel)]="user.photoURL" />
-              </label>
-              <button (click)="saveChanges(user)" class="btn blue center">Save</button>
-              <button class="btn blue" routerLink='/dashboard'>Cancel</button>
-            </div>
+
+          <div class="row s12 m12 l12 xl12">
+            <label>Enter new name:
+              <input [(ngModel)]="user.displayName" />
+            </label>
+            <label>Enter new email:
+              <input [(ngModel)]="user.email" />
+            </label>
+            <label>Paste profile picture by URL (copy URL your new photo and paste pls):
+              <input [(ngModel)]="user.photoURL" />
+            </label>
+            <button (click)="saveChanges(user)" class="btn blue center distance">Save</button>
+            <button class="btn blue center distance-2" routerLink='/dashboard'>Cancel</button>
           </div>
         </div>
       </div>
